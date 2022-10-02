@@ -1,0 +1,12 @@
+{
+  "extends": [
+    "stylelint-config-rational-order"
+  ],
+  "plugins": [
+    "stylelint-order"
+  ],
+  "rules": {
+    "indentation": 2,
+    "color-hex-case": "upper"
+  }
+}

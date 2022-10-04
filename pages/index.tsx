@@ -1,6 +1,7 @@
 import type { NextPage } from 'next';
 import React from 'react';
 import { Button, Heading, Paragraph, Rating, Tag } from '../components';
+import { withLayout } from '../layout/layout';
 
 const Home: NextPage = (): JSX.Element => {
   const [rating, setRating] = React.useState<number>(4);
@@ -21,4 +22,4 @@ const Home: NextPage = (): JSX.Element => {
   );
 };
 
-export default Home;
+export default withLayout(Home);

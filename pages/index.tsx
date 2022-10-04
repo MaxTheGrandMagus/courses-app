@@ -1,11 +1,13 @@
 import type { NextPage } from 'next';
-import { Heading } from '../components';
+import { Button, Heading } from '../components';
 
 const Home: NextPage = (): JSX.Element => {
   return (
-    <div>
+    <>
       <Heading tag='h1'>Текст</Heading>
-    </div>
+      <Button appearance='primary' arrow='right'>Кнопка</Button>
+      <Button appearance='ghost'>Кнопка</Button>
+    </>
   );
 };
 

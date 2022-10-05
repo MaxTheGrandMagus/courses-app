@@ -1,7 +1,6 @@
 import React from 'react';
 import { LayoutProps } from './layout.props';
 import styles from './layout.module.css';
-import classnames from 'classnames';
 import { Header } from './header/header';
 import { Sidebar } from './sidebar/sidebar';
 import { Footer } from './footer/footer';

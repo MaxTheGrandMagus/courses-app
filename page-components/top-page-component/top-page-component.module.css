@@ -1,7 +1,3 @@
-.wrapper {
-  margin-top: 2.5rem;
-}
-
 .products {
   display: flex;
   flex-wrap: wrap;

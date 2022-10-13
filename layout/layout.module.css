@@ -6,7 +6,7 @@
     "footer footer footer footer";
   grid-template-rows: auto 1fr auto;
   grid-template-columns: auto 230px minmax(320px, 1200px) auto;
-  gap: 0 1.875rem;
+  gap: 2.5rem 1.875rem;
   min-height: 100vh;
 }
 
@@ -33,6 +33,9 @@
   }
   .sidebar {
     display: none !important;
+  }
+  .body {
+    padding: 1rem;
   }
   .wrapper {
     grid-template-areas: 

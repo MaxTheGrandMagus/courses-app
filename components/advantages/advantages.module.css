@@ -1,0 +1,15 @@
+.advantage {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  gap: .625rem 2.5rem;
+  margin-bottom: 1.875rem;
+}
+
+.title {
+  align-self: center;
+  font-weight: bold;
+}
+
+.vline {
+  border-left: 1px solid var(--gray-light);
+}

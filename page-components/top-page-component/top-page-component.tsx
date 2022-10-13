@@ -1,7 +1,7 @@
 import React from 'react';
 import { TopPageComponentProps } from './top-page-component.props';
 import styles from './top-page-component.module.css';
-import { Heading, HhData, Tag } from '../../components';
+import { Advantages, Heading, HhData, Tag } from '../../components';
 import { TopLevelCategory } from '../../interfaces/page.interface';
 
 export const TopPageComponent = ({ page, products, firstCategory }: TopPageComponentProps):JSX.Element => {
@@ -23,7 +23,14 @@ export const TopPageComponent = ({ page, products, firstCategory }: TopPageCompo
         <Heading tag='h2'>Вакансии - {page.category}</Heading>
         <Tag color='red' size='m'>hh.ru</Tag>
       </div>
-      {firstCategory === TopLevelCategory.Courses && <HhData {...page.hh} />}
+      {firstCategory === TopLevelCategory.Courses && page.hh && <HhData {...page.hh} />}
+      {page.advantages && page.advantages.length > 0 && <>
+        <Heading tag='h2'>Преимущества</Heading>
+        <Advantages advantages={page.advantages} />
+      </>}
+      {page.seoText && <div className={styles.seo} dangerouslySetInnerHTML={{ __html: page.seoText }} />}
+      <Heading tag='h2'>Получаемые навыки</Heading>
+      {page.tags.map(t => <Tag key={t} color='primary'>{t}</Tag>)}
     </div>
   );
 };

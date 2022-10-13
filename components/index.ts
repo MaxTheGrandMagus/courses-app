@@ -6,3 +6,4 @@ export * from './rating/rating';
 export * from './card/card';
 export * from './hh-data/hh-data';
 export * from './advantages/advantages';
+export * from './sort/sort';

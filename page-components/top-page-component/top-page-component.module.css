@@ -19,3 +19,22 @@
   align-items: baseline;
   justify-items: left;
 }
+
+.seo h1 {
+  margin: 0;
+  font-weight: 500;
+  font-size: 1.625rem;
+  line-height: 2.188rem;
+}
+.seo h2 {
+  margin: 3.125rem 0 1.5625rem;
+  font-weight: 500;
+  font-size: 1.375rem;
+  line-height: 1.875rem;
+}
+.seo h3 {
+  margin: 0;
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.688rem;
+}

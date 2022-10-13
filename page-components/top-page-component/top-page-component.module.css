@@ -1,0 +1,25 @@
+.wrapper {
+  margin-top: 2.5rem;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.title {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 1.25rem;
+  align-items: baseline;
+  justify-items: left;
+}
+
+.hhTitle {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.25rem;
+  align-items: baseline;
+  justify-items: left;
+}

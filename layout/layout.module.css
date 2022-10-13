@@ -32,7 +32,7 @@
     display: block;
   }
   .sidebar {
-    display: none;
+    display: none !important;
   }
   .wrapper {
     grid-template-areas: 

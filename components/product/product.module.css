@@ -1,3 +1,132 @@
 .product {
-  
+  display: grid;
+  grid-template-columns: [start] 70px [logoEnd] 30px [titleStart] calc(50% - 100px) [middle] 1fr [priceStart] auto [priceEnd] 40px [creditStart] auto [creditEnd] 40px [rateStart] auto [end];
+  margin-bottom: 1.875rem;
+  padding: 1.875rem;
+}
+
+.logo {
+  grid-row: 1 / span 2;
+  grid-column: start / logoEnd;
+}
+
+.title, .tags {
+  grid-column: titleStart / middle;
+}
+
+.price .priceTitle {
+  grid-column: priceStart / priceEnd;
+}
+
+.credit, .creditTitle {
+  grid-column: creditStart / creditEnd;
+}
+
+.rating, .ratingTitle {
+  grid-column: rateStart / end;
+}
+
+.hr, .description, .actions {
+  grid-column: start / end;
+}
+
+.features {
+  grid-column: start / middle;
+}
+
+.advBlock {
+  grid-column: middle / end;
+}
+
+.logo img {
+  border-radius: 5px;
+}
+
+.title {
+  align-self: flex-end;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.6875rem;
+}
+
+.category {
+  margin-top: 7px;
+}
+
+.price, .credit {
+  align-self: flex-end;
+  font-size: 1.25rem;
+  line-height: 1.6875rem;
+}
+
+.month {
+  font-size: 14px;
+  line-height: 1.1875rem;
+}
+
+.oldPrice {
+  margin-left: 5px;
+}
+
+.rating {
+  align-self: flex-end;
+}
+
+.priceTitle, .creditTitle, .ratingTitle {
+  color: #A0A0A0;
+  font-weight: 300;
+  font-size: .875rem;
+  line-height: 1.1875rem;
+}
+
+.description {
+  margin-bottom: 15px;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.characteristics {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 10px;
+  padding-right: 3.75rem;
+  font-size: 1rem;
+  line-height: 2rem;
+}
+
+.characteristicsName {
+  font-weight: bold;
+}
+
+.characteristicsDots {
+  margin-bottom: 5px;
+  border-bottom: 1px dashed var(--gray-light);
+}
+
+.advBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  font-size: 1rem;
+  line-height: 1.375rem;
+}
+
+.advantages {
+  padding-left: 15px;
+  border-left: 2px solid var(--green);
+}
+
+.disadvantages {
+  padding-left: 15px;
+  border-left: 2px solid var(--red);
+}
+
+.advTitle {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.actions {
+  display: flex;
+  gap: 1.25rem;
 }

@@ -1,0 +1,8 @@
+.hr {
+  width: 100%;
+  height: 1px;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  background: var(--gray-light);
+  border: none;
+}

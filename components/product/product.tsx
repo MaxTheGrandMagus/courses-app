@@ -1,6 +1,7 @@
 import React from 'react';
 import { ProductProps } from './product.props';
 import styles from './product.module.css';
+import classnames from 'classnames';
 import { Card } from '../card/card';
 import { Rating } from '../rating/rating';
 import { Button, Divider, Tag } from '..';
@@ -62,7 +63,7 @@ export const Product = ({ product, className, ...props }: ProductProps):JSX.Elem
           <div>{product.disadvantages}</div>
         </div>}
       </div>
-      <Divider className={styles.hr} />
+      <Divider className={classnames(styles.hr, styles.hr2)} />
       <div className={styles.actions}>
         <Button appearance={'primary'}>Узнать подробнее</Button>
         <Button appearance={'ghost'} arrow={'right'}>Читать отзывы</Button>

@@ -7,6 +7,7 @@
   gap: 1.25rem;
   align-items: baseline;
   justify-items: left;
+  margin-bottom: 30px;
 }
 
 .hhTitle {
@@ -34,4 +35,10 @@
   font-weight: 500;
   font-size: 1.25rem;
   line-height: 1.688rem;
+}
+
+@media screen and (max-width: 640px) {
+  .title {
+    grid-template-columns: auto 1fr;
+  }
 }

@@ -14,8 +14,9 @@
   grid-column: titleStart / middle;
 }
 
-.price .priceTitle {
+.price, .priceTitle {
   grid-column: priceStart / priceEnd;
+  white-space: nowrap;
 }
 
 .credit, .creditTitle {
@@ -24,6 +25,7 @@
 
 .rating, .ratingTitle {
   grid-column: rateStart / end;
+  white-space: nowrap;
 }
 
 .hr, .description, .actions {
@@ -129,4 +131,121 @@
 .actions {
   display: flex;
   gap: 1.25rem;
+}
+
+@media screen and (max-width: 1320px) {
+  .product {
+    grid-template-areas: 
+      "logo . title title title title title"
+      "logo . tags tags tags tags tags"
+      "price price price . credit . rating"
+      "priceTitle priceTitle priceTitle . creditTitle . ratingTitle"
+      "hr hr hr hr hr hr hr"
+      "description description description description description description description"
+      "features features features features features features features"
+      "advBlock advBlock advBlock advBlock advBlock advBlock advBlock"
+      "hr2 hr2 hr2 hr2 hr2 hr2 hr2"
+      "actions actions actions actions actions actions actions"
+    ;
+    grid-template-columns: 70px 30px auto 40px auto 40px auto 1fr;
+  }
+  .logo {
+    grid-area: logo;
+    margin-bottom: 20px;
+  }
+  .title {
+    grid-area: title;
+  }
+  .tags {
+    grid-area: tags;
+    margin-bottom: 20px;
+  }
+  .price {
+    grid-area: price;
+  }
+  .credit {
+    grid-area: credit;
+  }
+  .rating {
+    grid-area: rating;
+  }
+  .priceTitle {
+    grid-area: priceTitle;
+  }
+  .creditTitle {
+    grid-area: creditTitle;
+  }
+  .ratingTitle {
+    grid-area: ratingTitle;
+  }
+  .hr {
+    grid-area: hr;
+  }
+  .description {
+    grid-area: description;
+  }
+  .features {
+    grid-area: features;
+    margin-bottom: 20px;
+  }
+  .advBlock {
+    grid-area: advBlock;
+  }
+  .hr2 {
+    grid-area: hr2;
+  }
+  .actions {
+    grid-area: actions;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .product {
+    grid-template-areas: 
+      "logo . title"
+      "logo . tags"
+      "priceTitle priceTitle price"
+      "creditTitle creditTitle credit"
+      "ratingTitle ratingTitle rating"
+      "hr hr hr"
+      "description description description"
+      "features features features"
+      "advBlock advBlock advBlock"
+      "hr2 hr2 hr2"
+      "actions actions actions"
+    ;
+    grid-template-columns: 70px 30px 1fr;
+  }
+  .price {
+    margin-bottom: 10px;
+  }
+  .credit {
+    margin-bottom: 10px;
+  }
+  .rating {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .product {
+    grid-template-areas: 
+      "logo"
+      "title"
+      "tags"
+      "price"
+      "priceTitle"
+      "credit"
+      "creditTitle"
+      "rating"
+      "ratingTitle"
+      "hr"
+      "description"
+      "features"
+      "advBlock"
+      "hr2"
+      "actions"
+    ;
+    grid-template-columns: 1fr;
+  }
 }

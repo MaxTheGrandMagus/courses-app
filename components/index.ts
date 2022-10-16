@@ -13,3 +13,4 @@ export * from './search/search';
 export * from './product/product';
 export * from './divider/divider';
 export * from './review/review';
+export * from './review-form/review-form';

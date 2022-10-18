@@ -1,14 +1,14 @@
-import React, { useRef } from 'react';
+import React, { ForwardedRef, forwardRef, useRef } from 'react';
 import { ProductProps } from './product.props';
 import styles from './product.module.css';
 import classnames from 'classnames';
-import { Card } from '../card/card';
-import { Rating } from '../rating/rating';
-import { Button, Divider, Review, ReviewForm, Tag } from '..';
+import { Button, Card, Divider, Rating, Review, ReviewForm, Tag } from '..';
 import { declOfNum, priceRu } from '../../helpers/helpers';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
-export const Product = ({ product, className, ...props }: ProductProps):JSX.Element => {
+// eslint-disable-next-line react/display-name
+export const Product = motion(forwardRef(({ product, className, ...props }: ProductProps, ref: ForwardedRef<HTMLDivElement>):JSX.Element => {
   const [isReviewOpened, setIsReviewOpened] = React.useState<boolean>(false);
   const reviewRef = useRef<HTMLDivElement>(null);
 
@@ -21,7 +21,7 @@ export const Product = ({ product, className, ...props }: ProductProps):JSX.Elem
   };
 
   return (
-    <div className={className} {...props}>
+    <div className={className} ref={ref} {...props}>
       <Card className={styles.product}>
         <div className={styles.logo}>
           <Image 
@@ -101,4 +101,4 @@ export const Product = ({ product, className, ...props }: ProductProps):JSX.Elem
       </Card>
     </div>
   );
-};
+}));

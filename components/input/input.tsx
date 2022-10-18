@@ -4,8 +4,7 @@ import styles from './input.module.css';
 import classnames from 'classnames';
 
 export const Input = ({ className, ...props }: InputProps):JSX.Element => {
-  return <input 
-    className={classnames(className, styles.input)} 
-    {...props}
-  />;
+  return (
+    <input className={classnames(className, styles.input)} {...props} />
+  );
 };

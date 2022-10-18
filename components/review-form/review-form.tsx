@@ -45,8 +45,15 @@ export const ReviewForm = ({ productId, className, ...props }: ReviewFormProps):
           <Controller
             control={control}
             name='rating'
+            rules={{ required: { value: true, message: 'Укажите рейтинг' } }}
             render={({ field }) => (
-              <Rating ref={field.ref} isEditable rating={field.value} setRating={field.onChange} />
+              <Rating 
+                isEditable 
+                ref={field.ref} 
+                rating={field.value} 
+                setRating={field.onChange}
+                error={errors.rating}
+              />
             )}
           />
         </div>

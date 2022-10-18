@@ -3,13 +3,18 @@ import { TextareaProps } from './textarea.props';
 import styles from './textarea.module.css';
 import classnames from 'classnames';
 
-export const Textarea = forwardRef(({ className, ...props }: TextareaProps, ref: ForwardedRef<HTMLTextAreaElement>):JSX.Element => {
+export const Textarea = forwardRef(({ className, error, ...props }: TextareaProps, ref: ForwardedRef<HTMLTextAreaElement>):JSX.Element => {
   return (
-    <textarea 
-      className={classnames(className, styles.textarea)}
-      ref={ref}
-      {...props}
-    />
+    <div className={classnames(styles.textareaWrapper, className)}>
+      <textarea 
+        className={classnames(styles.textarea, {
+          [styles.error]: error,
+        })}
+        ref={ref}
+        {...props}
+      />
+      {error && <span className={styles.errorMessage}>{error.message}</span>}
+    </div>
   );
 });
 Textarea.displayName = 'Textarea';

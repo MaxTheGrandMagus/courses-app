@@ -17,7 +17,7 @@ export interface IReviewForm {
 }
 
 export const ReviewForm = ({ productId, className, ...props }: ReviewFormProps):JSX.Element => {
-  const { register, control, handleSubmit } = useForm<IReviewForm>();
+  const { register, control, handleSubmit, formState: { errors } } = useForm<IReviewForm>();
 
   const onSubmit = (data: IReviewForm) => {
     console.log(data);
@@ -29,8 +29,17 @@ export const ReviewForm = ({ productId, className, ...props }: ReviewFormProps):
         className={classnames(styles.reviewForm, className)} 
         {...props}
       >
-        <Input {...register('name')} placeholder='Имя'/>
-        <Input {...register('title')} placeholder='Заголовок отзыва' className={styles.title} />
+        <Input 
+          {...register('name', { required: { value: true, message: 'Заполните имя' } })}
+          error={errors.name} 
+          placeholder='Имя'
+        />
+        <Input 
+          {...register('title', { required: { value: true, message: 'Заполните заголовок' } })}
+          error={errors.title}
+          placeholder='Заголовок отзыва' 
+          className={styles.title} 
+        />
         <div className={styles.rating}>
           <span>Оценка</span>
           <Controller
@@ -41,7 +50,12 @@ export const ReviewForm = ({ productId, className, ...props }: ReviewFormProps):
             )}
           />
         </div>
-        <Textarea {...register('description')} placeholder='Текст отзыва' className={styles.description} />
+        <Textarea 
+          {...register('description', { required: { value: true, message: 'Заполните описание' } })}
+          error={errors.description} 
+          placeholder='Текст отзыва' 
+          className={styles.description} 
+        />
         <div className={styles.submit}>
           <Button appearance='primary'>Отправить</Button>
           <span className={styles.info}>* Перед публикацией отзыв пройдет предварительную модерацию и проверку</span>

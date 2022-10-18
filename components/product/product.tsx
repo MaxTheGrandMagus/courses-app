@@ -102,3 +102,4 @@ export const Product = motion(forwardRef(({ product, className, ...props }: Prod
     </div>
   );
 }));
+Product.displayName = 'Product';

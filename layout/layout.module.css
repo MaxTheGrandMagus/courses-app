@@ -20,10 +20,28 @@
 
 .body {
   grid-area: body;
+  outline: none;
 }
 
 .footer {
   grid-area: footer;
+}
+
+.skipLink {
+  position: fixed;
+  top: 0;
+  left: 100px;
+  display: block;
+  height: 0;
+  overflow: hidden;
+  color: var(--white);
+  background: var(--primary);
+}
+
+.skipLinkDisplayed {
+  z-index: 100;
+  height: auto;
+  padding: 1rem;
 }
 
 @media (max-width: 768px) {

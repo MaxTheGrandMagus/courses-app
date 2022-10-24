@@ -20,13 +20,15 @@ a {
   --black: #3B434E;
   --gray-light: #EBEBEB;
   --gray: #A4A4A4;
-  --gray-dark: #787D85;
+  --gray-dark: #6C7077; /* accessibility color, old - #787D85 */
   --white: #FFFFFF;
-  --primary: #7653FC;
+  --primary: #7351F5; /* accessibility color, old - #7653FC */
   --primary-hover: #6344DF;
   --red: #FC836D;
   --red-light: #FFC7BD;
-  --green: #1DC37E;
+  --green: #007B48; /* accessibility color, old - #1DC37E */
   --green-light: #C8F8E4;
   --font-family: 'Noto Sans', sans-serif;
+  --tag-bg-gray: #8A99B7; /* accessibility color, old - #B3C0D9 */
+  --price-title: #757575; /* accessibility color, old - #A0A0A0 */
 }

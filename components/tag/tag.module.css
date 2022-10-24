@@ -28,7 +28,7 @@
 .grey {
   color: var(--white);
   font-weight: bold;
-  background: #B3C0D9;
+  background: var(--tag-bg-gray);
 }
 .green {
   color: var(--green);

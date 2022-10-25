@@ -89,7 +89,14 @@ export const Product = motion(forwardRef(({ product, className, ...props }: Prod
         <Divider className={classnames(styles.hr, styles.hr2)} />
         <div className={styles.actions}>
           <Button appearance={'primary'}>Узнать подробнее</Button>
-          <Button appearance={'ghost'} arrow={isReviewOpened ? 'down' : 'right'} onClick={() => setIsReviewOpened(!isReviewOpened)}>Читать отзывы</Button>
+          <Button 
+            appearance={'ghost'} 
+            arrow={isReviewOpened ? 'down' : 'right'} 
+            onClick={() => setIsReviewOpened(!isReviewOpened)}
+            aria-expanded={isReviewOpened}
+          >
+            Читать отзывы
+          </Button>
         </div>
       </Card>
       <motion.div animate={isReviewOpened ? 'visible' : 'hidden'} variants={variants} initial='hidden'>

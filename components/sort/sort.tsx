@@ -7,22 +7,22 @@ import SortIcon from '../../assets/icons/sort.svg';
 export const Sort = ({ sort, setSort, className, ...props }: SortProps):JSX.Element => {
   return (
     <div className={classnames(styles.sort, className)} {...props}>
-      <span 
+      <button 
         onClick={() => setSort(SortEnum.Rating)}
         className={classnames(styles.sortButton, {
           [styles.active]: sort === SortEnum.Rating
         })} 
       >
         <SortIcon className={styles.sortIcon} />По рейтингу
-      </span>
-      <span 
+      </button>
+      <button 
         onClick={() => setSort(SortEnum.Price)}
         className={classnames(styles.sortButton, {
           [styles.active]: sort === SortEnum.Price
         })}
       >
         <SortIcon className={styles.sortIcon} />По цене
-      </span>
+      </button>
     </div>
   );
 };

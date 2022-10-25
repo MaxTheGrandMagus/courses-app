@@ -5,15 +5,19 @@
   gap: 2.5rem;
 }
 
-.sort span {
+.sort button {
   display: grid;
   grid-template-columns: 20px 1fr;
   gap: 0.5rem;
   align-items: center;
+  font-size: 1rem;
+  line-height: 22px;
+  background: none;
+  border: none;
   cursor: pointer;
 }
 
-.sort span:not(.active) {
+.sort button:not(.active) {
   grid-template-columns: 1fr;
 }
 

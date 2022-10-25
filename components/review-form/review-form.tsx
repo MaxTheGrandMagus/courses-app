@@ -94,15 +94,31 @@ export const ReviewForm = ({ productId, isOpened, className, ...props }: ReviewF
           <span className={styles.info}>* Перед публикацией отзыв пройдет предварительную модерацию и проверку</span>
         </div>
       </div>
-      {isSuccess && <div className={classnames(styles.success, styles.panel)}>
-        <div className={styles.successTitle}>Ваш отзыв отправлен</div>
-        <div className={styles.successDescription}>Спасибо, ваш отзыв будет опубликован после проверки.</div>
-        <CloseIcon className={styles.closeIcon} onClick={() => setIsSuccess(false)} />
-      </div>}
-      {isError && <div className={classnames(styles.error, styles.panel)}>
-        Что-то пошло не так. Попробуйте отправить отзыв позже.
-        <CloseIcon className={styles.closeIcon} onClick={() => setIsError(undefined)} />
-      </div>}
+      {isSuccess && 
+        <div className={classnames(styles.success, styles.panel)} role="alert">
+          <div className={styles.successTitle}>Ваш отзыв отправлен</div>
+          <div className={styles.successDescription}>Спасибо, ваш отзыв будет опубликован после проверки.</div>
+          <button 
+            className={styles.closeIcon} 
+            onClick={() => setIsSuccess(false)}
+            aria-label='Закрыть оповещение'
+          >
+            <CloseIcon />
+          </button>
+        </div>
+      }
+      {isError && 
+        <div className={classnames(styles.error, styles.panel)} role="alert">
+          Что-то пошло не так. Попробуйте отправить отзыв позже.
+          <button
+            className={styles.closeIcon}
+            onClick={() => setIsError(undefined)}
+            aria-label='Закрыть оповещение'
+          >
+            <CloseIcon />
+          </button>
+        </div>
+      }
     </form>
   );
 };

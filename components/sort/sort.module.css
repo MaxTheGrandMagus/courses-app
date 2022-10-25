@@ -5,6 +5,10 @@
   gap: 2.5rem;
 }
 
+.sortName {
+  display: none;
+}
+
 .sort button {
   display: grid;
   grid-template-columns: 20px 1fr;

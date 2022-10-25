@@ -43,6 +43,7 @@ export const Search = ({ className, ...props }: SearchProps):JSX.Element => {
         className={styles.searchButton}
         appearance='primary'
         onClick={goToSearch}
+        aria-label='Искать по сайту'
       >
         <SearchIcon />
       </Button>

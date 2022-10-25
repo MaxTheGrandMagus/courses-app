@@ -29,9 +29,9 @@ export const TopPageComponent = ({ page, products, firstCategory }: TopPageCompo
         <Sort sort={sort} setSort={setSort} />
       </div>
 
-      <div className={styles.products}>
+      <div className={styles.products} role='list'>
         {sortedProducts && sortedProducts.map(p => (
-          <Product layout key={p._id} product={p} />
+          <Product layout key={p._id} product={p} role='listitem' />
         ))}
       </div>
       

@@ -1,3 +1,8 @@
+.firstLevelList {
+  padding: 0;
+  list-style: none;
+}
+
 .firstLevel {
   display: grid;
   grid-template-columns: 1.5rem 1fr;
@@ -19,20 +24,26 @@
 
 .secondLevel {
   margin-bottom: .625rem;
+  padding: 0;
   color: var(--gray-dark);
   font-weight: 300;
   font-size: .75rem;
   text-transform: uppercase;
+  background: none;
+  border: none;
   cursor: pointer;
 }
 .secondBlock {
   margin-top: 15px;
   margin-left: .75rem;
-  padding-left: 2rem;
+  padding: 0 0 0 2rem;
+  list-style: none;
   border-left: 1px solid #DFDFDF;
 }
 .secondLevelBlock {
+  padding: 0;
   overflow: hidden;
+  list-style: none;
 }
 
 .thirdLevel {

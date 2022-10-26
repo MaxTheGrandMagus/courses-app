@@ -2,9 +2,10 @@ import type { AppProps } from 'next/app';
 import '../styles/globals.css';
 import Head from 'next/head';
 import ym, { YMInitializer } from 'react-yandex-metrika';
+import Router from 'next/router';
 
 function MyApp({ Component, pageProps, router }: AppProps):JSX.Element {
-  router.events.on('routeChangeComplete', (url: string) => {
+  Router.events.on('routeChangeComplete', (url: string) => {
     if (typeof window !== 'undefined') {
       ym('hit', url);
     }

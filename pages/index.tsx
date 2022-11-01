@@ -6,6 +6,7 @@ import axios from 'axios';
 import { MenuItem } from '../interfaces/menu.interface';
 import { API } from '../helpers/api';
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const Home = ({ menu, firstCategory }: HomeProps): JSX.Element => {
   const [rating, setRating] = React.useState<number>(4);
   return (

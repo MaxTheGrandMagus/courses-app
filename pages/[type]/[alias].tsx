@@ -1,7 +1,7 @@
 import type { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from 'next';
 import React from 'react';
 import axios from 'axios';
-import { ParsedUrlQuery } from 'node:querystring';
+import { ParsedUrlQuery } from 'querystring';
 import { withLayout } from '../../layout/layout';
 import { MenuItem } from '../../interfaces/menu.interface';
 import { TopLevelCategory, TopPageModel } from '../../interfaces/page.interface';

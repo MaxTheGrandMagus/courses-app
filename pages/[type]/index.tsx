@@ -4,7 +4,7 @@ import { withLayout } from '../../layout/layout';
 import axios from 'axios';
 import { MenuItem } from '../../interfaces/menu.interface';
 import { firstLevelMenu } from '../../helpers/helpers';
-import { ParsedUrlQuery } from 'node:querystring';
+import { ParsedUrlQuery } from 'querystring';
 import { API } from '../../helpers/api';
 
 const Type = ({ firstCategory }: TypeProps): JSX.Element => {

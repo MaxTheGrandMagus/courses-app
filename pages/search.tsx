@@ -5,6 +5,7 @@ import axios from 'axios';
 import { MenuItem } from '../interfaces/menu.interface';
 import { API } from '../helpers/api';
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const Search = ({ menu, firstCategory }: SearchProps): JSX.Element => {
   return (
     <>
